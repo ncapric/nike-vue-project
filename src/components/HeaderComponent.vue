@@ -14,8 +14,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { socialMedia } from '@/constants/social-media-links';
 import { useStore } from 'vuex';
+
+import { socialMedia } from '@/constants/social-media-links';
 
 const store = useStore();
 

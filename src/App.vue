@@ -4,8 +4,8 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { RouterView } from 'vue-router';
 import { useStore } from 'vuex';
+import { RouterView } from 'vue-router';
 
 const store = useStore();
 

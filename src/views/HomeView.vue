@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import Header from '../components/HeaderComponent.vue';
-import Sidebar from '../components/SidebarComponent.vue';
-import Form from '../components/FormComponent.vue';
+import Header from '@/components/HeaderComponent.vue';
+import Sidebar from '@/components/SidebarComponent.vue';
+import Form from '@/components/FormComponent.vue';
 
 </script>
 

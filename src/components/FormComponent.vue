@@ -35,11 +35,11 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
 
-import Input from './InputComponent.vue';
-import Checkbox from './CheckboxComponent.vue';
+import Input from '@/components/InputComponent.vue';
+import Checkbox from '@/components/CheckboxComponent.vue';
 
 const router = useRouter();
 const username = ref('');
