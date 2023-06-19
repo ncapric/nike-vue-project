@@ -5,11 +5,7 @@ import type { IUser } from '@/interfaces/User.interface';
 
 const store = createStore({
   state:  {
-    users: [
-       { name: 'Nikola', lastname: 'Nikolic', age: 24 },
-       { name: 'Marko', lastname: 'Markovic', age: 90 },
-       { name: 'Mitar', lastname: 'Miric', age: 50 }
-    ],
+    users: [],
   },
   mutations: {
     setUsers(state: IState, users: IUser[]) {
@@ -35,8 +31,18 @@ const store = createStore({
     }
   },
   getters: {
-    getUsers: (state: IState) => state.users
-  }
+    getUsers: (state: IState) => { 
+      return state.users 
+    },
+    getRandomUserInitials: (state: IState) => {
+      const randomIndex = Math.floor(Math.random() * state.users.length);
+      const randomUser = state.users[randomIndex];
+
+      const initials = `${randomUser.name[0].toUpperCase()}. ${randomUser.lastname[0].toUpperCase()}.`
+
+      return initials
+    }
+  },
 })
 
 export default store;

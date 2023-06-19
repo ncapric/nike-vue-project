@@ -7,13 +7,20 @@
           <img :src="social.imgSrc" :alt="social.altText" />
         </a>
       </div>
-      <h2>Welcome N. C.</h2>
+      <h2>Welcome: {{ randomUserInitials }}</h2>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { socialMedia } from '@/constants/social-media-links';
+import { useStore } from 'vuex';
+
+const store = useStore();
+
+const randomUserInitials = computed(() => store.getters.getRandomUserInitials);
+
 </script>
 
 <style scoped>
