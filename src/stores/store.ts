@@ -26,9 +26,6 @@ const store = createStore({
       commit('addUser', user);
       localStorage.setItem('users', JSON.stringify(updatedUsers));
     },
-    saveUsers({ commit } : { commit: Commit }, users: IUser[] ) {
-      commit('setUsers', users);
-    }
   },
   getters: {
     getUsers: (state: IState) => { 
