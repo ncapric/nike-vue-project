@@ -18,6 +18,8 @@ import Form from '../components/FormComponent.vue';
 <style scoped>
 .home-page {
   display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 .container {
   display: flex;

@@ -10,9 +10,10 @@ import { useStore } from 'vuex';
 const store = useStore();
 
 onMounted(() => {
-  const locallyStoredUsers = JSON.parse(localStorage.getItem('users'));
+  const locallyStoredUsers = localStorage.getItem('users');
+  const parsedUsers = locallyStoredUsers ? JSON.parse(locallyStoredUsers) : [];
 
-  store.dispatch('setUsers', locallyStoredUsers);
+  store.dispatch('setUsers', parsedUsers);
 });
 
 </script>

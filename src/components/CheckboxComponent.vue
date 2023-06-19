@@ -4,7 +4,7 @@
     <input
       type="checkbox"
       :checked="modelValue"
-      @change="emitInputValue($event.target.checked)"
+      @change="emitInputValue(($event.target as HTMLInputElement)?.checked)"
     />
   </div>
 </template>

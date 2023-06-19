@@ -3,7 +3,7 @@ import Home from "@/views/HomeView.vue";
 import UsersList from "@/views/UsersListView.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",

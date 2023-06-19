@@ -34,8 +34,8 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
 import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 
 import Input from './InputComponent.vue';
@@ -91,6 +91,7 @@ form {
   align-items: center;
   justify-content: center;
   background-color: #d1ede1;
+  height: 100vh;
 }
 
 input {
