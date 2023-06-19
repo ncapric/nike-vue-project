@@ -1,9 +1,11 @@
 <template>
   <ag-grid-vue
-    style="height: 100vh; width: 100%"
+    style="height: 309px; width: 100%"
     class="ag-theme-alpine"
     :columnDefs="columnDefs"
     :rowData="rowData"
+    :pagination="true"
+    :paginationPageSize="5"
   ></ag-grid-vue>
 </template>
 
