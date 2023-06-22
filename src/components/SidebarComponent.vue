@@ -21,10 +21,10 @@ function goToUsers () {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .container {
   width: 10vh;
-  background-color: #7bc5ae;
+  background-color: $secondary-color;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -3,33 +3,36 @@
     <h2>Form</h2>
 
   <Input
-      text="First name"
-      for="first-name"
-      id="first-name"
-      type="text"
-      v-model="username"
-    />
-    <Input
-      text="Last Name"
-      for="last-name"
-      id="last-name"
-      type="text"
-      v-model="lastname"
-    />
-    <Input
-      text="How old are you?"
-      for="age"
-      id="age"
-      type="number"
-      v-model="age"
-    />
-    <Checkbox
-      text="I have my parent's consent."
-      v-model="underAgedCheck"
-      v-if="isUnderAged"
-    />
-    <Checkbox text="I agree with the terms and services" v-model="isChecked" />
-    <input type="submit" value="Submit" :disabled="!formIsValid" />
+    text="First name"
+    id="first-name"
+    type="text"
+    v-model="username"
+  />
+  <Input
+    v-model="lastname"
+    text="Last Name"
+    for="last-name"
+    id="last-name"
+    type="text"
+  />
+  <Input
+    text="How old are you?"
+    for="age"
+    id="age"
+    type="number"
+    v-model="age"
+  />
+  <Checkbox
+    text="I have my parent's consent."
+    v-model="underAgedCheck"
+    v-if="isUnderAged"
+  />
+  <Checkbox
+    text="I agree with the terms and services"
+    v-model="isChecked"
+  />
+  <!-- Use component -->
+  <input type="submit" value="Submit" :disabled="!formIsValid" />
   </form>
 </template>
 
@@ -38,8 +41,8 @@ import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
 
-import Input from '@/components/InputComponent.vue';
-import Checkbox from '@/components/CheckboxComponent.vue';
+import Input from '@/components/inputs/InputComponent.vue';
+import Checkbox from '@/components/inputs/CheckboxComponent.vue';
 
 const router = useRouter();
 const username = ref('');
@@ -73,35 +76,40 @@ function submitForm () {
       age: age.value
     };
 
-    store.dispatch('addUser', newUser);
+    try {
+      store.dispatch('addUser', newUser);
 
-    router.push('/users');
-    return alert('FORM IS VALID CONGRATULATIONS!');
+      router.push('/users');
+
+      return alert('FORM IS VALID CONGRATULATIONS!');
+    } catch (e) {
+      alert(e);
+    }
   }
 
   return alert('Form is not valid');
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 form {
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #d1ede1;
+  background-color: $primary-color;
   height: 100vh;
 }
 
 input {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  margin: 10px 5px;
   display: block;
+  font-size: 18px;
   width: 300px;
   border: none;
   border-bottom: 1px solid #757575;
+  margin: 10px 5px;
+  padding: 10px 10px 10px 5px;
 }
 input:focus {
   outline: none;

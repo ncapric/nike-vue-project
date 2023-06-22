@@ -2,7 +2,7 @@
   <div class="header">
     <img src="../assets/icons/site-logo.svg" alt="Logo" class="logo" />
     <div class="right-side">
-      <div v-for="social in socialMedia" :key="social.altText">
+      <div v-for="social in socialMediaLinks" :key="social.altText">
         <a :href="social.pageLink">
           <img :src="social.imgSrc" :alt="social.altText" />
         </a>
@@ -16,20 +16,20 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 
-import { socialMedia } from '@/constants/social-media-links';
+import { socialMediaLinks } from '@/constants/social-media-links';
 
 const store = useStore();
 
-const randomUserInitials = computed(() => store.getters.getRandomUserInitials);
+const randomUserInitials = computed(() => store.getters.userInitials);
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #028c6a;
+  background-color: $complementary-color;
   width: 90vw;
 }
 .right-side {

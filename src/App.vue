@@ -10,10 +10,7 @@ import { RouterView } from 'vue-router';
 const store = useStore();
 
 onMounted(() => {
-  const locallyStoredUsers = localStorage.getItem('users');
-  const parsedUsers = locallyStoredUsers ? JSON.parse(locallyStoredUsers) : [];
-
-  store.dispatch('setUsers', parsedUsers);
+  store.dispatch('setUsers', null);
 });
 
 </script>
