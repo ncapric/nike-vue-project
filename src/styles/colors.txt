@@ -1,8 +1,0 @@
-/* Primary  */
-#D1EDE1 
-/* Secondary */
-#7BC5AE 
-/* Complimentary 1# */
-#028C6A
-/* Complimentary 2# */
-#003E19

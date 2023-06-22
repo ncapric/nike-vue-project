@@ -17,20 +17,16 @@ import { AgGridVue } from 'ag-grid-vue3';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
-const columnDefs = [
-  { headerName: 'Name', field: 'name' },
-  { headerName: 'Lastname', field: 'lastname' },
-  { headerName: 'Age', field: 'age' }
-];
+import { columnDefs } from '@/constants/column-def';
 
 const store = useStore();
 const rowData = computed(() => {
-  return store.getters.getUsers;
+  return store.getters.users;
 }
 );
 
 onUnmounted(() => {
-  store.dispatch('setUsers');
+  store.dispatch('setUsers', undefined);
 });
 
 </script>

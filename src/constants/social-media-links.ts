@@ -1,4 +1,4 @@
-export const socialMedia = [
+export const socialMediaLinks = [
   {
     pageLink: "https://www.facebook.com/",
     imgSrc: "/assets/icons/Facebook.png",
