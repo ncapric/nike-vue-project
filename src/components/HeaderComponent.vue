@@ -20,7 +20,7 @@ import { socialMediaLinks } from '@/constants/social-media-links';
 
 const store = useStore();
 
-const randomUserInitials = computed(() => store.getters.userInitials);
+const randomUserInitials = computed(() => store?.getters.userInitials);
 
 </script>
 

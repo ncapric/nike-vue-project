@@ -5,7 +5,7 @@
     <div class="logout">
       <p>Logout</p>
       <a href="">
-        <img src="../assets/icons/Logout-button.svg" alt="" />
+        <img src="../assets/icons/Logout-button.svg" alt="Logout" />
       </a>
     </div>
   </div>
@@ -17,7 +17,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 function goToUsers () {
-  router.push('/users');
+  router?.push('/users');
 }
 </script>
 

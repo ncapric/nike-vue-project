@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header Tests > displays the user initials 1`] = `
+"<div data-v-727bebfc=\\"\\" class=\\"header\\"><img data-v-727bebfc=\\"\\" src=\\"/src/assets/icons/site-logo.svg\\" alt=\\"Logo\\" class=\\"logo\\">
+  <div data-v-727bebfc=\\"\\" class=\\"right-side\\">
+    <div data-v-727bebfc=\\"\\"><a data-v-727bebfc=\\"\\" href=\\"https://www.facebook.com/\\"><img data-v-727bebfc=\\"\\" src=\\"/assets/icons/Facebook.png\\" alt=\\"Facebook\\"></a></div>
+    <div data-v-727bebfc=\\"\\"><a data-v-727bebfc=\\"\\" href=\\"https://www.youtube.com/\\"><img data-v-727bebfc=\\"\\" src=\\"/assets/icons/Youtube.png\\" alt=\\"Youtube\\"></a></div>
+    <div data-v-727bebfc=\\"\\"><a data-v-727bebfc=\\"\\" href=\\"https://twitter.com/\\"><img data-v-727bebfc=\\"\\" src=\\"/assets/icons/Twitter.svg\\" alt=\\"Twitter\\"></a></div>
+    <h2 data-v-727bebfc=\\"\\">Welcome: </h2>
+  </div>
+</div>"
+`;
